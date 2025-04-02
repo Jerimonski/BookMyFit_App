@@ -1,11 +1,18 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native"
+import { Pressable, ScrollView, Text } from "react-native"
 import { Link } from "expo-router"
+import { HomeIcon } from "./../components/Icons"
 
-export default function Explore() {
+export default function explore() {
   return (
     <ScrollView>
-      <Text className='bg-blue-300'>explore</Text>
-      <Link href='/'>go to Home</Link>
+      <Link asChild href='/'>
+        <Pressable>
+          {({ pressed }) => (
+            <HomeIcon className={`${pressed ? "bg-red-400" : "bg-blue-300"}`} />
+          )}
+        </Pressable>
+      </Link>
+      <Text>asdsadsadsadsadsad</Text>
     </ScrollView>
   )
 }
