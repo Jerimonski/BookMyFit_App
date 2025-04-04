@@ -1,13 +1,14 @@
 import { View } from "react-native"
-import App from "../App"
-import Header from "../components/Header/Header"
 import { Link } from "expo-router"
+import YogaCard from "../components/SportCards/YogaCard"
 
 export default function index() {
   return (
     <View>
-      <Header></Header>
-      <Link href='explore'>go to explore</Link>
+      <YogaCard></YogaCard>
+      <Link href='explore' className='bg-red-200'>
+        go to explore
+      </Link>
     </View>
   )
 }

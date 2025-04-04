@@ -1,6 +1,6 @@
-import { Pressable, ScrollView, Text } from "react-native"
+import { Pressable, ScrollView } from "react-native"
 import { Link } from "expo-router"
-import { HomeIcon } from "./../components/Icons"
+import { HomeIcon } from "../components/Icons"
 
 export default function explore() {
   return (
@@ -12,7 +12,6 @@ export default function explore() {
           )}
         </Pressable>
       </Link>
-      <Text>asdsadsadsadsadsad</Text>
     </ScrollView>
   )
 }

@@ -1,12 +1,10 @@
 import { StatusBar } from "expo-status-bar"
-import { Text, View } from "react-native"
-import "./global.css"
+import { View } from "react-native"
 
 export default function App() {
   return (
-    <View className='flex justify-center'>
-      <Text className='bg-slate-500 text-2xl'>App</Text>
-      <StatusBar />
+    <View className='flex-1 bg-gray-900'>
+      <StatusBar style='light' />
     </View>
   )
 }
