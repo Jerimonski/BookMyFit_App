@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "userName": "Lil Supa",
+      "userPassword": "Supa",
+      "userEmail": "Lilsupa@gmail.com"
+    },
+    {
+      "userName": "El Chamo Gonzales",
+      "userPassword": "Tyron",
+      "userEmail": "cancerCerro@gmail.com"
+    },
+    {
+      "userName": "Apache El Del Estilache",
+      "userPassword": "Apache",
+      "userEmail": "ElDelEstilache@gmail.com"
+    }
+  ]
+}
