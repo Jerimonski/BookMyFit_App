@@ -14,13 +14,15 @@ export default function StatsView() {
         <Text className='text-light-green font-bold text-2xl text-center'>
           12
         </Text>
-        <Text className='text-secondary-text text-sm text-center'>Booking</Text>
+        <Text className='text-secondary-text text-sm text-center'>
+          Activities
+        </Text>
       </View>
       <View className='flex-1'>
         <Text className='text-light-green font-bold text-2xl text-center'>
           12
         </Text>
-        <Text className='text-secondary-text text-sm text-center'>Booking</Text>
+        <Text className='text-secondary-text text-sm text-center'>Points</Text>
       </View>
     </View>
   )

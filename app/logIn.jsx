@@ -1,23 +1,29 @@
 import { useState } from "react"
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"
 import { Link, useRouter } from "expo-router"
-import api from "../ApiUsers.json"
+import useUsers from "../components/hooks/useUsers"
+import { useUserContext } from "../context/UserContext"
 
 export default function LogIn() {
   const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const router = useRouter()
+  const { user } = useUsers()
+  const { setCurrentUser } = useUserContext()
 
   const handleLogin = () => {
-    const foundUser = api.users.find(
+    const foundUser = user.find(
       (u) =>
-        u.userEmail.toLowerCase() === email.toLowerCase() &&
-        u.userPassword === password
+        (u.email.toLowerCase() === email.toLowerCase() ||
+          u.name.toLowerCase() === name.toLowerCase()) &&
+        u.password === password
     )
 
     if (foundUser) {
-      Alert.alert("Bienvenido 💚", `Hola ${foundUser.userName} ✨`)
-      router.replace("/") // Redirige al home
+      setCurrentUser(foundUser) // 👈 Guardamos el usuario logueado en Context
+      Alert.alert("Bienvenido 💚", `Hola ${foundUser.name} ✨`)
+      router.replace("/")
     } else {
       Alert.alert("Oops 😢", "Correo o contraseña incorrectos")
     }
