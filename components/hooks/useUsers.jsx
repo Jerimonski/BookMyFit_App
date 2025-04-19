@@ -1,18 +1,17 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { API_URL } from "@env"
 
 export default function useUsers() {
-  const [user, setUser] = useState([])
+  const [users, setUsers] = useState([])
 
   const fetchData = () => {
-    return axios
-      .get("https://apimocha.com/bookmyfit/Users")
-      .then((response) => setUser(response.data))
+    return axios.get(API_URL).then((response) => setUsers(response.data))
   }
 
   useEffect(() => {
     fetchData()
   }, [])
 
-  return { user }
+  return { users }
 }

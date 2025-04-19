@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <UserProvider>
       <Drawer
-        className='flex-1'
+        className='flex-1 z-50'
         drawerContent={() => <CustomDrawerContent />}
         screenOptions={{
           headerStyle: { backgroundColor: "black" },

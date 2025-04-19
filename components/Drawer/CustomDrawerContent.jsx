@@ -14,12 +14,13 @@ export default function CustomDrawerContent() {
 
   return (
     <View className='flex-1 bg-[#111827] text-white'>
-      {/* Mini sección de usuario */}
       <View className='flex-row items-center p-4 gap-4'>
         <UserIcon />
         {currentUser ? (
           <View className='flex flex-col gap-1'>
-            <Text className='text-white font-semibold'>{currentUser.name}</Text>
+            <Text className='text-white font-semibold'>
+              {currentUser.nombre}
+            </Text>
             <Text className='text-white text-sm'>{currentUser.email}</Text>
           </View>
         ) : (
