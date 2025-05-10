@@ -75,6 +75,12 @@ export default function index() {
                     source={require("../public/ClasesDeGimnasio.jpg")}
                   />
                 </ActivitiesCards>
+                <ActivitiesCards title='Baloncesto'>
+                  <Image
+                    className='w-32 h-32 rounded-md'
+                    source={require("../public/ClasesDeBaloncesto.jpg")}
+                  />
+                </ActivitiesCards>
               </View>
             )}
           />
